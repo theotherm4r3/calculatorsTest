@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="AllCalculators.js"></script>
+    <link rel="stylesheet" type="text/css" href="BaseConversionCalculator.css">
+    <title>Calculators</title>
+</head>
+<body>
+
+<div class="row">
+
+    <div class="column" id="baseConversionDiv">
+        <div class="header">
+            <h1>Base Calculator</h1>
+        </div>
+
+        <form>
+            <!--First box: Input-->
+            <fieldset> 
+                <legend>Input</legend>
+                Enter Unsigned Integer<input type="text" id="inputText" value="Input Here" onclick="clearText(1)"><br><br>
+                <div id="options">
+                    <label id="binaryDiv">
+                        <input type="radio" id="binaryRadio" name="conversionType" value="binaryRadio" checked="checked" onclick="ShowHideDiv()">Binary
+                    </label><br>
+                    <label id="octalDiv">
+                        <input type="radio" id="octalRadio" name="conversionType" value="octalRadio" onclick="ShowHideDiv()">Octal
+                    </label><br>
+                    <label id="hexadecimalDiv">
+                        <input type="radio" id="hexaRadio" name="conversionType" value="hexaRadio" onclick="ShowHideDiv()">Hexadecimal
+                    </label><br>
+                    <label id="otherDiv">
+                        <input type="radio" id="otherRadio" name="conversionType" onclick="ShowHideDiv()">Other
+                    </label><br>
+                    <div id="inputTextAreaDiv">
+                        <input type="text" id="otherBaseText" value="Other Base Here" onclick="clearText(2)"><br>
+                        <span id="caption">Goes up to base 36(?)</span>
+                    </div>
+                </div>
+                <input type="button" id="convertBtn" value="Convert"><br>
+                <input type="button" id="historyBtn" value="History"><br>
+                <input type="button" id="resetBtn" value="Reset"><br>
+            </fieldset>
+            
+            <!--Second box: Output-->
+            <fieldset> 
+                <legend>Output</legend>
+                Answer:<input type="text" id="outputText" value="Output Here">
+            </fieldset> 
+            
+            <!--Third section: History-->
+                <div id="history"></div>
+        </form>
+        
+    </div>
+
+    <div class="column">
+        <div class="header">
+            <h1>Four Function Calculator</h1>
+        </div>        
+        <fieldset>
+            <table>
+                <tr>
+                    <td colspan="4">
+                    <form>
+                        <input type="text" id="inputText2" readonly="readonly">
+                    </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td><form><input type="button" id="plusBtn" value="+"></form></td>
+                    <td><form><input type="button" id="minusBtn" value="-"></form></td>
+                    <td><form><input type="button" id="multiplyBtn" value="*"></form></td>
+                    <td><form><input type="button" id="divideBtn" value="/"></form></td>
+                </tr>
+                <tr>
+                    <td><form><input type="button" id="7Btn" value="7"></form></td>
+                    <td><form><input type="button" id="8Btn" value="8"></form></td>
+                    <td><form><input type="button" id="9Btn" value="9"></form></td>
+                    <td rowspan="2"><form><input type="button" id="equalsBtn" value="="></form></td>
+                </tr>
+                <tr>
+                    <td><form><input type="button" id="4Btn" value="4"></form></td>
+                    <td><form><input type="button" id="5Btn" value="5"></form></td>
+                    <td><form><input type="button" id="6Btn" value="6"></form></td>
+                </tr>
+                <tr>
+                    <td><form><input type="button" id="1Btn" value="1"></form></td>
+                    <td><form><input type="button" id="2Btn" value="2"></form></td>
+                    <td><form><input type="button" id="3Btn" value="3"></form></td>
+                    <td><form><input type="button" id="CBtn" value="C"></form></td>
+                </tr>
+                <tr>
+                    <td><form><input type="button" id="0Btn" value="0"></form></td>
+                    <td><form><input type="button" id=".Btn" value="."></form></td>
+                    <td><form><input type="button" id="HBtn" value="H"></form></td>
+                    <td><form><input type="button" id="CEBtn" value="CE"></form></td>
+                </tr>
+            </table>
+            <div id="fourFunctionHistory"></div>
+        </fieldset>
+
+    </div>
+
+</div>
+
+</body>
+</html>
